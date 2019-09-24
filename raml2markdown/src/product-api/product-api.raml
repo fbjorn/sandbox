@@ -29,6 +29,18 @@ types:
           Use hasMore indicator to check it.
         type: string
         example: first
+  pagination:
+    type: object
+    properties:
+      links:
+        description: The list of related URLs for pagination
+        type: paginationURL[]
+      hasMore:
+        description: Indicates if the next page exists
+        type: boolean
+      totalCount:
+        description: Total count of products in query
+        type: integer
 /products/{version}:
   description: Manage product resources. Create and read products.
   post:
